@@ -1,14 +1,14 @@
 Shared user ID application example
 ===================
 
-Example of two Android applications signed with the same keystore and using the same *sharedUserId*.
+Example of two Android applications signed with the same keystore and using the same **sharedUserId**.
 
 The project contains two applications: Alice and Bob.
 Alice can start an activity from Bob and send a mesage.
 
 ##Setting up sharedUserId applications
 
-The first step is to add the same android:sharedUserId property in the root element in AndroidManifest.xml of both applications: 
+The first step is to add the same **android:sharedUserId** property in the root element in **AndroidManifest.xml** of both applications: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -18,6 +18,16 @@ The first step is to add the same android:sharedUserId property in the root elem
 ```
 
 Second step is to sign both applications with the same keystore.
+
+Additionaly, if you wish to run both of the applications in the same process (this is not required), add the same **android:process** value to the **application** element in AndroidManifest.xml of both applications, for example:
+
+```xml
+<application
+    android:icon="@drawable/icon"
+    android:label="@string/app_name"
+    android:process="com.test.app"
+    >
+```
 
 ##Starting an Activity from other Application
 
