@@ -27,3 +27,11 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+#Gradle
+.gradle
+
+
+/local.properties
+
+.DS_Store
